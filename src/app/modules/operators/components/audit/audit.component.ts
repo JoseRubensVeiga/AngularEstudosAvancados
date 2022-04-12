@@ -11,6 +11,7 @@ export class AuditComponent implements OnDestroy {
   destroyed = new Subject<void>();
 
   subject1$ = new Subject<string>();
+  clicks = 0;
 
   subject2$ = new Subject<string>();
 
@@ -21,7 +22,7 @@ export class AuditComponent implements OnDestroy {
   );
 
   emitObservable1(): void {
-    this.subject1$.next('Observable 1');
+    this.subject1$.next(`Observable ${++this.clicks}`);
   }
 
   emitObservable2(): void {
