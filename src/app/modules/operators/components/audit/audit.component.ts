@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { audit, Subject } from 'rxjs';
+import { audit, Subject, takeUntil } from 'rxjs';
 import { BaseComponent } from 'src/app/shared/base/base.component';
 
 @Component({
@@ -14,7 +14,10 @@ export class AuditComponent extends BaseComponent {
 
   subject2$ = new Subject<string>();
 
-  audited$ = this.subject1$.pipe(audit(() => this.subject2$));
+  audited$ = this.subject1$.pipe(
+    takeUntil(this.destroyed$),
+    audit(() => this.subject2$)
+  );
 
   emitObservable1(): void {
     this.subject1$.next(`Observable ${++this.clicks}`);

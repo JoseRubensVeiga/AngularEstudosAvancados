@@ -15,14 +15,14 @@ export class DebounceComponent extends BaseComponent implements OnInit {
 
   ngOnInit(): void {
     const result = this.subject$.pipe(
+      takeUntil(this.destroyed$),
       tap((x) => console.log('--- Clicou no botão: ' + x)),
       debounce(() => interval(3000)),
       tap((x) =>
         console.log(
           '--- Evento do clique no botão: ' + x + ' -> após 3 segundos'
         )
-      ),
-      takeUntil(this.destroyed$)
+      )
     );
     result.subscribe(() => console.log());
   }

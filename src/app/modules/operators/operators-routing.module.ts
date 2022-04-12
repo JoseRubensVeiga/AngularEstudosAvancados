@@ -6,6 +6,7 @@ import { BufferCountComponent } from './components/buffer-count/buffer-count.com
 import { BufferWhenComponent } from './components/buffer-when/buffer-when.component';
 import { ConcatMapComponent } from './components/concat-map/concat-map.component';
 import { DebounceComponent } from './components/debounce/debounce.component';
+import { DelayComponent } from './components/delay/delay.component';
 import { OperatorsComponent } from './components/operators/operators.component';
 
 export const routes: Routes = [
@@ -15,6 +16,7 @@ export const routes: Routes = [
   { path: 'buffer-when', component: BufferWhenComponent },
   { path: 'concat-map', component: ConcatMapComponent },
   { path: 'debounce', component: DebounceComponent },
+  { path: 'delay', component: DelayComponent },
 ];
 
 @NgModule({

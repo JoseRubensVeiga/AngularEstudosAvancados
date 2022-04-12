@@ -14,8 +14,8 @@ export class BufferWhenComponent extends BaseComponent {
   );
 
   clicksAmount$ = fromEvent(document, 'click').pipe(
-    bufferWhen(() => this.keyUps$),
     takeUntil(this.destroyed$),
+    bufferWhen(() => this.keyUps$),
     map((value) => value.length)
   );
 }

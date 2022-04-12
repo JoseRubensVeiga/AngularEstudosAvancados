@@ -13,13 +13,13 @@ export class ConcatMapComponent extends BaseComponent implements OnInit {
 
   ngOnInit(): void {
     const result = this.subject$.pipe(
+      takeUntil(this.destroyed$),
       tap(console.log),
       concatMap(() =>
         of('--- Resultado do segundo observable -> após 3 segundos').pipe(
           delay(3000)
         )
-      ),
-      takeUntil(this.destroyed$)
+      )
     );
     result.subscribe((x) => console.log(x));
   }
