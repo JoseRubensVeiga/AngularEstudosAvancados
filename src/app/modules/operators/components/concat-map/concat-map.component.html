@@ -1,0 +1,15 @@
+<p class="text-muted">
+  O mergeMap é bem parecido com o switchMap. Ambos fazem uma troca de inscrição
+  do observable, porém o mergeMap espera que o segundo observable seja
+  completado para escutar o próximo e fazer a troca de inscrição.
+</p>
+<p class="text-muted">
+  Percebe-se que se clicar-mos duas vezes no botão seguidamente, ele executará
+  duas vezes o fluxo, porém espera que a primeira junção acabe para juntar a
+  segunda
+</p>
+<div class="d-flex flex-column align-items-start">
+  <button (click)="emitObservable()" class="btn btn-success">
+    Emitir Observable
+  </button>
+</div>

@@ -15,11 +15,7 @@ export class AuditComponent implements OnDestroy {
 
   subject2$ = new Subject<string>();
 
-  audited$ = this.subject1$.pipe(
-    audit(() => this.subject2$),
-    tap((v) => console.log(v)),
-    mapTo('Emitiu :)')
-  );
+  audited$ = this.subject1$.pipe(audit(() => this.subject2$));
 
   emitObservable1(): void {
     this.subject1$.next(`Observable ${++this.clicks}`);

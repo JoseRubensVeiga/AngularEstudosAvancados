@@ -9,6 +9,11 @@ const routes: Routes = [
         (m) => m.OperatorsModule
       ),
   },
+
+  {
+    path: '**',
+    redirectTo: 'operators',
+  },
 ];
 
 @NgModule({
