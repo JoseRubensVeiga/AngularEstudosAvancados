@@ -8,6 +8,7 @@ import { ConcatMapComponent } from './components/concat-map/concat-map.component
 import { DebounceComponent } from './components/debounce/debounce.component';
 import { DelayComponent } from './components/delay/delay.component';
 import { DistinctComponent } from './components/distinct/distinct.component';
+import { ElementAtComponent } from './components/element-at/element-at.component';
 import { OperatorsComponent } from './components/operators/operators.component';
 
 export const routes: Routes = [
@@ -19,6 +20,7 @@ export const routes: Routes = [
   { path: 'debounce', component: DebounceComponent },
   { path: 'delay', component: DelayComponent },
   { path: 'distinct', component: DistinctComponent },
+  { path: 'element-at', component: ElementAtComponent },
 ];
 
 @NgModule({

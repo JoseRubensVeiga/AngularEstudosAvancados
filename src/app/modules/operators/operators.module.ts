@@ -10,6 +10,7 @@ import { ConcatMapComponent } from './components/concat-map/concat-map.component
 import { DebounceComponent } from './components/debounce/debounce.component';
 import { DelayComponent } from './components/delay/delay.component';
 import { DistinctComponent } from './components/distinct/distinct.component';
+import { ElementAtComponent } from './components/element-at/element-at.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DistinctComponent } from './components/distinct/distinct.component';
     ConcatMapComponent,
     DebounceComponent,
     DelayComponent,
-    DistinctComponent
+    DistinctComponent,
+    ElementAtComponent
   ],
   imports: [CommonModule, OperatorsRoutingModule],
 })
