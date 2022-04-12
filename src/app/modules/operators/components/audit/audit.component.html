@@ -1,1 +1,17 @@
-<p>audit works!</p>
+<p class="text-muted">
+  Espera um segundo observable ser emitido para continuar com o valor do
+  primeiro
+</p>
+<div class="d-flex flex-column align-items-start">
+  <button (click)="emitObservable1()" class="btn btn-success">
+    Emitir Observable 1
+  </button>
+
+  <button (click)="emitObservable2()" class="btn btn-danger mt-4">
+    Emitir Observable 2
+  </button>
+
+  <h1 class="display-1">
+    {{ audited$ | async }}
+  </h1>
+</div>

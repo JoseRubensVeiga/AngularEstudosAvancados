@@ -1,10 +1,5 @@
-import {
-  Component,
-  OnInit,
-  ChangeDetectionStrategy,
-  OnDestroy,
-} from '@angular/core';
-import { audit, fromEvent, interval, Subject } from 'rxjs';
+import { Component, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
+import { audit, fromEvent, interval, mapTo, Subject, tap } from 'rxjs';
 
 @Component({
   selector: 'app-audit',
@@ -12,13 +7,25 @@ import { audit, fromEvent, interval, Subject } from 'rxjs';
   styleUrls: ['./audit.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AuditComponent implements OnInit, OnDestroy {
+export class AuditComponent implements OnDestroy {
   destroyed = new Subject<void>();
 
-  ngOnInit(): void {
-    const clicks = fromEvent(document, 'click');
-    const result = clicks.pipe(audit((ev) => interval(1000)));
-    result.subscribe((x) => console.log(x));
+  subject1$ = new Subject<string>();
+
+  subject2$ = new Subject<string>();
+
+  audited$ = this.subject1$.pipe(
+    audit(() => this.subject2$),
+    tap((v) => console.log(v)),
+    mapTo('Emitiu :)')
+  );
+
+  emitObservable1(): void {
+    this.subject1$.next('Observable 1');
+  }
+
+  emitObservable2(): void {
+    this.subject2$.next('Observable 2');
   }
 
   ngOnDestroy(): void {

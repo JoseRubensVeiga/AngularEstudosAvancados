@@ -1,0 +1,10 @@
+<div class="m-5">
+  <h1 class="diplay-1">Operators</h1>
+  <div class="d-flex mt-4">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let route of routes">
+        <a [routerLink]="route">{{ route }}</a>
+      </li>
+    </ul>
+  </div>
+</div>

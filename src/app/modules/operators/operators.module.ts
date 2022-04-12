@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { OperatorsRoutingModule } from './operators-routing.module';
 import { AuditComponent } from './components/audit/audit.component';
+import { OperatorsComponent } from './components/operators/operators.component';
 
 @NgModule({
   declarations: [
-    AuditComponent
+    AuditComponent,
+    OperatorsComponent
   ],
   imports: [CommonModule, OperatorsRoutingModule],
 })
