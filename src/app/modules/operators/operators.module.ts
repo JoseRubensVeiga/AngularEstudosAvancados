@@ -9,6 +9,7 @@ import { BufferWhenComponent } from './components/buffer-when/buffer-when.compon
 import { ConcatMapComponent } from './components/concat-map/concat-map.component';
 import { DebounceComponent } from './components/debounce/debounce.component';
 import { DelayComponent } from './components/delay/delay.component';
+import { DistinctComponent } from './components/distinct/distinct.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DelayComponent } from './components/delay/delay.component';
     BufferWhenComponent,
     ConcatMapComponent,
     DebounceComponent,
-    DelayComponent
+    DelayComponent,
+    DistinctComponent
   ],
   imports: [CommonModule, OperatorsRoutingModule],
 })
