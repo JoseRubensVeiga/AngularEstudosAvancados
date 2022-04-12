@@ -1,5 +1,6 @@
-import { Component, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
-import { audit, fromEvent, interval, mapTo, Subject, tap } from 'rxjs';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { audit, Subject } from 'rxjs';
+import { BaseComponent } from 'src/app/shared/base/base.component';
 
 @Component({
   selector: 'app-audit',
@@ -7,9 +8,7 @@ import { audit, fromEvent, interval, mapTo, Subject, tap } from 'rxjs';
   styleUrls: ['./audit.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AuditComponent implements OnDestroy {
-  destroyed = new Subject<void>();
-
+export class AuditComponent extends BaseComponent {
   subject1$ = new Subject<string>();
   clicks = 0;
 
@@ -23,9 +22,5 @@ export class AuditComponent implements OnDestroy {
 
   emitObservable2(): void {
     this.subject2$.next('Observable 2');
-  }
-
-  ngOnDestroy(): void {
-    this.destroyed.unsubscribe();
   }
 }

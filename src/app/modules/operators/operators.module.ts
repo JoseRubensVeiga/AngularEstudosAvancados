@@ -7,6 +7,7 @@ import { OperatorsComponent } from './components/operators/operators.component';
 import { BufferCountComponent } from './components/buffer-count/buffer-count.component';
 import { BufferWhenComponent } from './components/buffer-when/buffer-when.component';
 import { ConcatMapComponent } from './components/concat-map/concat-map.component';
+import { DebounceComponent } from './components/debounce/debounce.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ConcatMapComponent } from './components/concat-map/concat-map.component
     OperatorsComponent,
     BufferCountComponent,
     BufferWhenComponent,
-    ConcatMapComponent
+    ConcatMapComponent,
+    DebounceComponent
   ],
   imports: [CommonModule, OperatorsRoutingModule],
 })
