@@ -11,6 +11,7 @@ import { DebounceComponent } from './components/debounce/debounce.component';
 import { DelayComponent } from './components/delay/delay.component';
 import { DistinctComponent } from './components/distinct/distinct.component';
 import { ElementAtComponent } from './components/element-at/element-at.component';
+import { ExhaustAllComponent } from './components/exhaust-all/exhaust-all.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ElementAtComponent } from './components/element-at/element-at.component
     DebounceComponent,
     DelayComponent,
     DistinctComponent,
-    ElementAtComponent
+    ElementAtComponent,
+    ExhaustAllComponent,
   ],
   imports: [CommonModule, OperatorsRoutingModule],
 })
