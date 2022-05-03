@@ -10,6 +10,7 @@ import { DelayComponent } from './components/delay/delay.component';
 import { DistinctComponent } from './components/distinct/distinct.component';
 import { ElementAtComponent } from './components/element-at/element-at.component';
 import { ExhaustAllComponent } from './components/exhaust-all/exhaust-all.component';
+import { FinalizeComponent } from './components/finalize/finalize.component';
 import { OperatorsComponent } from './components/operators/operators.component';
 
 export const routes: Routes = [
@@ -23,6 +24,7 @@ export const routes: Routes = [
   { path: 'distinct', component: DistinctComponent },
   { path: 'element-at', component: ElementAtComponent },
   { path: 'exhaust-all', component: ExhaustAllComponent },
+  { path: 'finalize', component: FinalizeComponent },
 ];
 
 @NgModule({

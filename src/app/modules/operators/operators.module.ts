@@ -12,6 +12,7 @@ import { DelayComponent } from './components/delay/delay.component';
 import { DistinctComponent } from './components/distinct/distinct.component';
 import { ElementAtComponent } from './components/element-at/element-at.component';
 import { ExhaustAllComponent } from './components/exhaust-all/exhaust-all.component';
+import { FinalizeComponent } from './components/finalize/finalize.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ExhaustAllComponent } from './components/exhaust-all/exhaust-all.compon
     DistinctComponent,
     ElementAtComponent,
     ExhaustAllComponent,
+    FinalizeComponent,
   ],
   imports: [CommonModule, OperatorsRoutingModule],
 })
