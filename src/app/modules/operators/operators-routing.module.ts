@@ -12,6 +12,7 @@ import { ElementAtComponent } from './components/element-at';
 import { ExhaustAllComponent } from './components/exhaust-all';
 import { FilterComponent } from './components/filter';
 import { FinalizeComponent } from './components/finalize';
+import { FindIndexComponent } from './components/find-index';
 import { FirstComponent } from './components/first';
 import { OperatorsComponent } from './components/operators';
 
@@ -29,6 +30,7 @@ export const routes: Routes = [
   { path: 'finalize', component: FinalizeComponent },
   { path: 'first', component: FirstComponent },
   { path: 'filter', component: FilterComponent },
+  { path: 'find-index', component: FindIndexComponent },
 ];
 
 @NgModule({

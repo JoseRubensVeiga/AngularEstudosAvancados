@@ -15,6 +15,7 @@ import { ExhaustAllComponent } from './components/exhaust-all';
 import { FinalizeComponent } from './components/finalize';
 import { FirstComponent } from './components/first';
 import { FilterComponent } from './components/filter';
+import { FindIndexComponent } from './components/find-index';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { FilterComponent } from './components/filter';
     FinalizeComponent,
     FirstComponent,
     FilterComponent,
+    FindIndexComponent,
   ],
   imports: [CommonModule, OperatorsRoutingModule],
 })
