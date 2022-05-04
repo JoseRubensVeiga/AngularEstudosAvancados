@@ -11,7 +11,8 @@ import { DistinctComponent } from './components/distinct/distinct.component';
 import { ElementAtComponent } from './components/element-at/element-at.component';
 import { ExhaustAllComponent } from './components/exhaust-all/exhaust-all.component';
 import { FinalizeComponent } from './components/finalize/finalize.component';
-import { OperatorsComponent } from './components/operators/operators.component';
+import { FirstComponent } from './components/first';
+import { OperatorsComponent } from './components/operators';
 
 export const routes: Routes = [
   { path: '', component: OperatorsComponent },
@@ -25,6 +26,7 @@ export const routes: Routes = [
   { path: 'element-at', component: ElementAtComponent },
   { path: 'exhaust-all', component: ExhaustAllComponent },
   { path: 'finalize', component: FinalizeComponent },
+  { path: 'first', component: FirstComponent },
 ];
 
 @NgModule({
