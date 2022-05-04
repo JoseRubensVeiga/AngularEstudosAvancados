@@ -13,6 +13,8 @@ import { DistinctComponent } from './components/distinct/distinct.component';
 import { ElementAtComponent } from './components/element-at/element-at.component';
 import { ExhaustAllComponent } from './components/exhaust-all/exhaust-all.component';
 import { FinalizeComponent } from './components/finalize/finalize.component';
+import { FirstComponent } from './components/first/first.component';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { FinalizeComponent } from './components/finalize/finalize.component';
     ElementAtComponent,
     ExhaustAllComponent,
     FinalizeComponent,
+    FirstComponent,
+    FilterComponent,
   ],
   imports: [CommonModule, OperatorsRoutingModule],
 })
